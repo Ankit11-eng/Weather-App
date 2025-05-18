@@ -1,0 +1,96 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Cloud animation styles */
+.cloud {
+  position: absolute;
+  top: 50px;
+  background: url('https://svgshare.com/i/11tx.svg') no-repeat;
+  background-size: contain;
+  width: 500px;
+  height: 300px;
+  opacity: 0.4;
+  animation: floatClouds 60s linear infinite;
+}
+
+.cloud:nth-child(1) {
+  left: -200px;
+  top: 50px;
+  animation-delay: 0s;
+}
+
+.cloud:nth-child(2) {
+  left: -500px;
+  top: 3000px;
+  animation-delay: 15s;
+  opacity: 0.3;
+}
+
+.cloud:nth-child(3) {
+  left: -400px;
+  top: 200px;
+  animation-delay: 30s;
+  opacity: 0.5;
+}
+
+@keyframes floatClouds {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(200vw);
+  }
+}
+
+h1 {
+  margin-bottom: 20px;
+  z-index: 2;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 250px;
+  z-index: 2;
+}
+
+button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.weather {
+  margin-top: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  z-index: 2;
+}
+
+.weather img {
+  width: 64px;
+}
+
+.error {
+  margin-top: 20px;
+  color: #ffcccc;
+  z-index: 2;
+}
